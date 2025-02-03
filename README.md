@@ -4,8 +4,6 @@ This project is a chatbot interface that allows users to interact with a Large L
 
 ## Tech Stack
 
-In the project directory, you can run:
-
 ### Frontend
 
 React – Framework for building the user interface
@@ -19,6 +17,7 @@ Axios – For handling HTTP requests to the LLM API
 ### Authentication
 
 Firebase Authentication – Google login integration
+
 
 ## Installation
 
