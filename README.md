@@ -28,12 +28,12 @@ Node.js & npm (or yarn)
 
 Firebase account with authentication enabled
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 ### Steps
 
 1. Clone the repository
 git clone https://github.com/yluo12/ChatbotInterface.git
+
 cd your-repo
 
 2. Install dependencies
@@ -42,9 +42,9 @@ npm install
 3. Set up Firebase
 Go to Firebase Console
 
-Create a new project and enable Google Authentication
+  Create a new project and enable Google Authentication
 
-Copy your Firebase config and create a .env file in the root directory
+  Copy your Firebase config and create a .env file in the root directory
 
 4. Run the project
 npm start
