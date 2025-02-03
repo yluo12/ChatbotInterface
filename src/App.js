@@ -4,7 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import NavBar from "./components/NavBar";
 import Welcome from "./components/Welcome";
 import Chatbot from "./components/Chatbot";
-import ChatbotOpenAI from "./components/ChatbotOpenAI";
 
 function App() {
   const [user] = useAuthState(auth);
