@@ -18,13 +18,6 @@ const Bubble = ({message, loading}) => {
         </div>
       }
       <pre>{formatter(message.text)}</pre>
-      {/* {loading ?
-        <div className='loading'>
-          <div className='dot'></div>
-          <div className='dot'></div>
-          <div className='dot'></div>
-        </div> : <pre>{formatter(message.text)}</pre>
-      } */}
     </li>
   );
 };

@@ -61,6 +61,7 @@ const Chatbot = () => {
     }
   };
 
+  // the .container-bubble always scroll to the bottom
   useEffect(() => {
     if (containerRef.current) {
       containerRef.current.scrollTop = containerRef.current.scrollHeight;

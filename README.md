@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Chatbot Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a chatbot interface that allows users to interact with a Large Language Model (LLM) API after logging in with Google. The application features a user-friendly UI built with React and styled using Sass.
 
-## Available Scripts
+## Tech Stack
 
 In the project directory, you can run:
 
-### `npm start`
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React – Framework for building the user interface
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sass – Styling with SCSS for maintainable and modular styles
 
-### `npm test`
+### API Requests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Axios – For handling HTTP requests to the LLM API
 
-### `npm run build`
+### Authentication
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase Authentication – Google login integration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+Ensure you have the following installed:
 
-### `npm run eject`
+Node.js & npm (or yarn)
+
+Firebase account with authentication enabled
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository
+git clone https://github.com/yluo12/ChatbotInterface.git
+cd your-repo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install dependencies
+npm install
 
-## Learn More
+3. Set up Firebase
+Go to Firebase Console
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a new project and enable Google Authentication
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copy your Firebase config and create a .env file in the root directory
 
-### Code Splitting
+4. Run the project
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+Click Login with Google to authenticate.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start interacting with the chatbot.
 
-### Making a Progressive Web App
+Enjoy the real-time responses from the LLM API!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to open issues or pull requests to improve the project.
