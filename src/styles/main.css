@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: #171a1d;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background: linear-gradient(135deg, #5c6680, #7672ac);
+}
+
+.App {
+  text-align: center;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  letter-spacing: -1px;
+  padding: 24px 64px;
+  border-bottom: 2px solid #565f78;
+  background: #5c6680;
+}
+.nav-bar h1 {
+  font: 700 36px "Ubuntu", sans-serif;
+}
+
+.container {
+  height: 75vh;
+  max-width: 60vw;
+  margin: 24px auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.welcome {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 18px;
+}
+.welcome h2 {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+.welcome ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.welcome button {
+  margin-top: 36px;
+  padding: 8px 24px;
+}
+
+.container-greeting {
+  flex-grow: 1;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.container-greeting ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.img-bot {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.chatbot {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chatbot .chatbot-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  background-color: #e3b08d;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+.chatbot .chatbot-title .icon-close {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+}
+.chatbot .chatbot-title .icon-close:hover, .chatbot .chatbot-title .icon-close:active {
+  fill: #f7d5bf;
+}
+.chatbot ul {
+  list-style-type: none;
+}
+.chatbot .container-input {
+  width: 100%;
+  background-color: #e9eaf2;
+  overflow: hidden;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 16px;
+}
+.chatbot .container-input input {
+  width: 90%;
+  padding: 12px;
+  background-color: #e9eaf2;
+  font-size: 16px;
+  border: none;
+}
+.chatbot .container-input .btn-send {
+  color: #e3b08d;
+  background-color: #e9eaf2;
+  box-shadow: none;
+  color: #3f4158;
+}
+.chatbot .container-input .btn-send:hover, .chatbot .container-input .btn-send:active {
+  color: #5c6680;
+}
+
+.chat-page {
+  flex-grow: 1;
+  overflow-y: auto;
+  border-radius: inherit;
+}
+
+.container-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: inherit;
+  position: relative;
+}
+.container-body span {
+  color: #757579;
+}
+
+.container-bubble {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-height: 95%;
+  overflow-y: auto;
+}
+
+.bubble-bot {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 8px;
+  margin-right: auto;
+}
+.bubble-bot .container-bot {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+.bubble-bot pre {
+  width: auto;
+  max-width: 600px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+  line-height: 1.25;
+  background-color: #f9e5d8;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px #f9e5d8;
+}
+
+.bubble-user {
+  background-color: #e9eaf2;
+  padding: 12px;
+  border-radius: 12px;
+  overflow-wrap: break-word;
+  margin-left: auto;
+  box-shadow: 0px 0px 10px #e9eaf2;
+}
+.bubble-user pre {
+  width: auto;
+  max-width: 600px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.btn {
+  padding: 2px 16px;
+  border: none;
+  border-radius: 12px;
+  font: 600 20px "Roboto", sans-serif;
+  background-color: #3f4158;
+  color: #f7d5bf;
+  box-shadow: 0px 0px 16px #4c4e6b;
+  cursor: pointer;
+  transition: font-size 1s;
+}
+.btn:hover, .btn:active {
+  color: #d3ad94;
+  font-size: 20.25px;
+}
+.btn:disabled {
+  color: #d3ad94;
+}
+
+.btn-start {
+  padding: 6px 16px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+}
+
+.loading {
+  font-size: 18px;
+  position: relative;
+  right: center;
+  top: -12px;
+}
+
+@media (max-width: 800px) {
+  .nav-bar {
+    padding: 16px 36px;
+  }
+  .nav-bar h1 {
+    font-size: 28px;
+  }
+  .container-input {
+    padding: 8px !important;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .img-bot {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 18px;
+  }
+  .container-greeting {
+    font-size: 16px;
+  }
+  .container-greeting ul {
+    gap: 8px;
+    font-weight: 600;
+  }
+  .welcome {
+    padding-top: 18px;
+    font-size: 16px;
+  }
+  .welcome h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .welcome ul {
+    gap: 8px;
+    font-weight: 600;
+  }
+  .welcome button {
+    margin-top: 18px;
+  }
+  .btn {
+    font-size: 16px;
+    transition: none;
+  }
+  .btn:hover, .btn:active {
+    font-size: 20.05px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
