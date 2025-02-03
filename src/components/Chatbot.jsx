@@ -24,7 +24,7 @@ const Chatbot = () => {
   };
 
   const inputChangeHandler = (e) => {
-    console.log('change handler is invoked');
+    // console.log('change handler is invoked');
     setInput(e.target.value);
   };
 
@@ -51,7 +51,7 @@ const Chatbot = () => {
           }
         });
       const res = data.data.message;
-      console.log('data from api', res);
+      // console.log('data from api', res);
       setMessages((prev) => [...prev, {text: res, sender: 'bot'}]);
     } catch (err) {
       console.log('Error fetching response', err);
